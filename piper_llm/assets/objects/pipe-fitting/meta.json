@@ -1,0 +1,84 @@
+{
+  "name": "pipe-fitting",
+  "description": "Hex nipple, 1-inch male pipe thread both ends, chrome-plated brass (Hornbach article 7154578, sold as a 1-inch double nipple)",
+  "frame": {
+    "origin": "centre of volume, which is the geometric centre by symmetry",
+    "z": "the axis of the part; the two ends are identical, so the sign is arbitrary",
+    "x": "from the axis towards a corner of the hex",
+    "y": "z cross x"
+  },
+  "symmetry": {
+    "rotation": "6-fold about z (60 degree steps), from the hex; the thread helix breaks it only by an axial shift of pitch/6 = 0.385 mm per step, below the camera's resolution",
+    "flip": "end for end (180 degrees about x) up to the thread phase: both ends are identical"
+  },
+  "source": {
+    "kind": "generated from calliper measurements of the real part; no downloaded geometry",
+    "measured_on": "2026-09-18",
+    "resolution_mm": 0.1,
+    "product": "https://www.hornbach.sk/p/dvojnipel-1-chrom/7154578/",
+    "material": "brass, chrome-plated"
+  },
+  "measured_mm": {
+    "length": 31.5,
+    "thread_od": 33.2,
+    "pitch": 2.31,
+    "thread_len_each_end": 11.5,
+    "relief_len": 1.5,
+    "hex_across_flats": 34.7,
+    "hex_across_corners": 39.5,
+    "hex_thickness": 5.0,
+    "hex_from_end_a": 13.3,
+    "bore": 25.5
+  },
+  "assumed": {
+    "end_chamfer_mm": 1.0,
+    "bore_chamfer_mm": 0.5,
+    "thread_form": "BSP/Whitworth, 55.0 degree flanks, depth 1.479 mm",
+    "thread_style": "helix",
+    "right_hand": true,
+    "hex_centred": true,
+    "relief_at_root_diameter": true
+  },
+  "derived_mm": {
+    "root_diameter": 30.24,
+    "hex_corner_radius": 1.84,
+    "relief_each_side": 1.75
+  },
+  "mass_g": null,
+  "to_verify": [
+    "end and bore chamfers, by eye against reference photos (not included)",
+    "mass on a scale (brass would give about the value printed by the build)"
+  ],
+  "tools": {
+    "trimesh": "5.1.0",
+    "numpy": "2.4.6"
+  },
+  "unit": "m",
+  "mesh": {
+    "file": "pipe-fitting.stl",
+    "sha256": "232f4834bf2cff3ddb4363430b22c16b958f958314c1cfcd53b20fb159788037",
+    "triangles": 24632,
+    "vertices": 12316,
+    "watertight": true,
+    "pieces": 1,
+    "bounds_m": [
+      [
+        -0.01976,
+        -0.01735,
+        -0.01575
+      ],
+      [
+        0.01974,
+        0.01735,
+        0.01575
+      ]
+    ],
+    "extents_m": [
+      0.0395,
+      0.0347,
+      0.0315
+    ],
+    "volume_cm3": 9.78,
+    "surface_area_cm2": 86.9
+  }
+}

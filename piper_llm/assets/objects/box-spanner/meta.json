@@ -1,0 +1,95 @@
+{
+  "name": "box-spanner",
+  "description": "Tubular box spanner 14 x 15 mm, DIN 896 form B, zinc-plated steel (Hornbach article 8839238)",
+  "frame": {
+    "origin": "centre of volume, close to the middle of the tube",
+    "z": "the axis of the tube, pointing towards end A, the 14 mm socket, which is up when the stamped markings read the right way; end B (15 mm) is at -z",
+    "x": "from the axis towards a corner of the hexes, which are aligned with each other; hole A runs along x",
+    "y": "z cross x; hole B runs along y"
+  },
+  "symmetry": {
+    "rotation": "2-fold about z (180 degrees): the hexes and the through holes all survive a half turn",
+    "flip": "none: the two ends differ (14 versus 15 mm) and the holes are crossed"
+  },
+  "source": {
+    "kind": "generated from calliper measurements of the real part; no downloaded geometry",
+    "measured_on": "2026-09-18",
+    "resolution_mm": 0.1,
+    "product": "https://www.hornbach.sk/p/kluc-rurkovy-14x15/8839238/",
+    "standard": "DIN 896 form B",
+    "material": "steel, zinc-plated"
+  },
+  "measured_mm": {
+    "length": 141.0,
+    "tube_od": 19.0,
+    "wall": 2.0,
+    "end_a": {
+      "socket_af": 14.1,
+      "outside_af": 18.3,
+      "outside_ac": 20.3,
+      "hex_len": 14.0,
+      "hole_d": 8.5,
+      "hole_from_end": 30.0,
+      "hole_through": "corners"
+    },
+    "end_b": {
+      "socket_af": 15.2,
+      "outside_af": 19.2,
+      "outside_ac": 21.3,
+      "hex_len": 16.0,
+      "hole_d": 8.5,
+      "hole_from_end": 30.0,
+      "hole_through": "flats"
+    },
+    "holes_crossed_90deg": true,
+    "socket_depth": "equal to the outside hex length"
+  },
+  "assumed": {
+    "blend_len_mm": 3.0,
+    "end_chamfer_mm": 0.5,
+    "mouth_chamfer_mm": 0.5,
+    "inner_corner_rounding": "outer rounding minus the wall thickness"
+  },
+  "derived_mm": {
+    "bore": 15.0,
+    "outer_corner_radius_a": 2.69,
+    "outer_corner_radius_b": 2.81
+  },
+  "mass_g": null,
+  "to_verify": [
+    "blend length between hex and tube, by eye against reference photos (not included)",
+    "mass on a scale (steel would give about the value printed by the build)"
+  ],
+  "tools": {
+    "trimesh": "5.1.0",
+    "numpy": "2.4.6"
+  },
+  "unit": "m",
+  "mesh": {
+    "file": "box-spanner.stl",
+    "sha256": "3e64daf6ebbf05015aadfed67c4dc32776daa11517d15baa88552c979712187e",
+    "triangles": 7392,
+    "vertices": 3688,
+    "watertight": true,
+    "pieces": 1,
+    "bounds_m": [
+      [
+        -0.01065,
+        -0.0096,
+        -0.07036
+      ],
+      [
+        0.01065,
+        0.0096,
+        0.07064
+      ]
+    ],
+    "extents_m": [
+      0.0213,
+      0.0192,
+      0.141
+    ],
+    "volume_cm3": 14.87,
+    "surface_area_cm2": 152.2
+  }
+}

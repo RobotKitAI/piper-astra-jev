@@ -1,0 +1,126 @@
+{
+  "name": "trowel",
+  "description": "Cat's-tongue trowel 140 x 65 mm, polished steel blade with a lacquered wooden handle (Hornbach article 6642994)",
+  "frame": {
+    "origin": "centre of volume, which lies in the handle; the blade's underside is the plane z = -0.0475 m",
+    "z": "normal of the blade, pointing up towards the handle when the tool lies blade down",
+    "x": "along the blade from the heel edge towards the tip",
+    "y": "z cross x"
+  },
+  "symmetry": {
+    "rotation": "none",
+    "mirror": "the x-z plane; a mirror image is not a pose, so nothing is ambiguous for the pose estimator"
+  },
+  "source": {
+    "kind": "generated from calliper measurements and three photos of the real tool; no downloaded geometry",
+    "measured_on": "2026-09-18",
+    "resolution_mm": 0.1,
+    "product": "https://www.hornbach.sk/p/ocelova-lyzica-macaci-jazyk-140x65-mm/6642994/",
+    "material": "polished steel blade, steel rod and ferrule, lacquered beech handle"
+  },
+  "measured_mm": {
+    "blade_len": 140.0,
+    "heel_width": 67.0,
+    "tip_width": 29.0,
+    "blade_thickness": 1.0,
+    "tang": {
+      "len": 29.0,
+      "width": 9.0,
+      "thickness": 5.0
+    },
+    "rod": {
+      "diameter": 7.0,
+      "near_side_from_heel_edge": 6.0
+    },
+    "ferrule": {
+      "diameter": 22.0,
+      "len": 12.0,
+      "top_height": 40.0
+    },
+    "handle": {
+      "len": 111.0,
+      "end_centre_height": 75.0,
+      "end_x_rough": -110.0,
+      "stations_mm_diameter": [
+        [
+          0.0,
+          23.5
+        ],
+        [
+          25.0,
+          27.5
+        ],
+        [
+          50.0,
+          30.0
+        ],
+        [
+          75.0,
+          28.0
+        ],
+        [
+          101.0,
+          26.0
+        ]
+      ]
+    }
+  },
+  "assumed": {
+    "heel_corner_radius_mm": 8.0,
+    "tang_tip_thickness_mm": 1.5,
+    "ferrule_front_centre_x_mm": 13.0,
+    "ferrule_front_centre_height_mm": 29.8,
+    "rod_lean_at_ferrule_deg": 14.0,
+    "handle_end_dome_mm": 10.0,
+    "heel_edge": "straight",
+    "handle_profile": "smooth curve through the five measured stations",
+    "from": "a side photo of the tool (not included): the ferrule's axis sits 30 mm above the blade and 13 mm in front of the heel edge, and the handle leans 21 deg"
+  },
+  "derived": {
+    "handle_tilt_deg": 21.58
+  },
+  "mass_g": null,
+  "to_verify": [
+    "ferrule: horizontal distance from the heel edge to the top of its front rim (expected about 9 mm towards the tip) and the height of its centre (expected 30 mm)",
+    "heel corner rounding and tang shape, by eye against reference photos (not included)",
+    "mass on a scale (about the value printed by the build)"
+  ],
+  "tools": {
+    "trimesh": "5.1.0",
+    "numpy": "2.4.6"
+  },
+  "unit": "m",
+  "mesh": {
+    "file": "trowel.stl",
+    "sha256": "5838346afe0ca2462efddc51a3d757ce483756d8ee34d875052e9f8fb47877bb",
+    "triangles": 11366,
+    "vertices": 5685,
+    "watertight": true,
+    "pieces": 1,
+    "bounds_m": [
+      [
+        -0.06739,
+        -0.0335,
+        -0.04749
+      ],
+      [
+        0.17513,
+        0.0335,
+        0.03647
+      ]
+    ],
+    "extents_m": [
+      0.24252,
+      0.067,
+      0.08396
+    ],
+    "volume_cm3": 77.16,
+    "surface_area_cm2": 249.3
+  },
+  "centre_of_mass_m": [
+    0.0418,
+    0.0,
+    -0.0216
+  ],
+  "centre_of_mass_from": "the parts of the mesh build weighted by material: steel at 7.85 g/cm3 for the blade, tang, rod, a 0.7 mm ferrule tube and a 5 mm tang assumed 60 mm into the handle; beech at 0.72 g/cm3 for the handle. That is 7 mm in front of the heel edge and 26 mm above the table, under the ferrule; the build's own estimate with a solid steel ferrule moves it 1.3 mm. The centre of volume, in the handle, is 42 mm behind it. Estimated mass 128 g, not weighed."
+}
